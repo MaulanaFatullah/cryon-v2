@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryon</title>
+        <link rel="stylesheet" href="css/output.css">
+    </head>
+
+    <body>
+        <div class="background">
+            <img src="./assets/Bg.png" alt="Background">
+        </div>
+
+        <nav class="flex flex-col justify-around w-1/4 h-screen fixed">
+            <div class="nav-list w-full flex flex-col justify-center items-left gap-10 pt-16 pb-36 relative">
+                <a href="#home" class="text-white text-3xl font-light font-jost ml-20">Home</a>
+                <a href="#collection" class="text-white text-3xl font-light font-jost ml-20">Collection</a>
+                <a href="#project" class="text-white text-3xl font-light font-jost ml-20">Project</a>
+                <a href="#about" class="text-white text-3xl font-light font-jost ml-20">About</a>
+            </div>
+            <div class="name-tag mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
+                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana
+                    Fatullah</span>
+            </div>
+        </nav>
+
+        <main class="w-full h-full flex justify-center items-center">
+            <div class="max-w-5xl relative">
+                <section class="px-44">
+                    <img src="./assets/Palette.png" alt="Palette" class="absolute top-0 -right-[15%] shadow-xl">
+                    <img src="./assets/heliconia.jpeg" alt="Palette" class="max-w-xl rounded-b-2xl shadow-2xl">
+                    <div class="py-12 text-white font-normal flex flex-col items-center ">
+                        <h1 class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-[8rem] drop-shadow-lg">Welcome</h1>
+                        <div class="w-full flex justify-end">
+                            <p class="text-2xl text-right w-[500px]">
+                                <span class="text-5xl text-accent font-bold ">Hi</span>, this website was created to store my
+                                project
+                            </p>
+                        </div>
+                        <div class="w-full flex items-start">
+                            <p class="text-[20px] text-left font-light w-[400px] -mt-5">
+                                You may also view a gallery of images that I took with my smartphone.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="collection" class="px-16 py-24">
+                        <div class="collection-page" id="collection-page">
+                            
+                        </div>
+                </section>
+            </div>
+        </main>
+
+        <aside
+            class="max-w-1/4 h-full flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight pt-20 pb-60 tracking-wide">
+            <h1 class="text-2xl">Home</h1>
+            <p class="text-[4rem] -rotate-90 ">Cryon V2 <span class="text-3xl">©2023</span></p>
+        </aside>
+
+        <footer>
+
+        </footer>
+        <script src="./js/CryCollection.js"></script>
+    </body>
+
+</html>
