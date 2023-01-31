@@ -8,3 +8,5 @@ let yyyy = today.getFullYear();
 
 today = monthNames[month] + ' ' + dd;
 document.getElementById('dateNow').innerText = "It's " + today;
+document.getElementById('yearNow').innerText = "©" + yyyy;
+document.getElementById('yearNowTop').innerText = "©" + yyyy;

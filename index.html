@@ -17,7 +17,7 @@
         </div>
 
         <!-- Navigation menu -->
-        <nav class="flex flex-col justify-around w-1/4 h-screen fixed">
+        <nav class="hidden 2xl:flex flex-col justify-around w-1/4 h-screen fixed">
             <div class="nav-list w-full flex flex-col justify-center items-left gap-10 pt-16 pb-36 relative">
                 <a href="#home" class="text-white text-3xl font-light font-jost ml-20">Home</a>
                 <a href="#collection" class="text-white text-3xl font-light font-jost ml-20">Collection</a>
@@ -26,48 +26,48 @@
                 <a href="#expertise" class="text-white text-3xl font-light font-jost ml-20">Expertise</a>
             </div>
             <div class="name-tag mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
-                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana
-                    Fatullah</span>
+                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana Fatullah</span>
             </div>
         </nav>
 <!-- Main -->
-        <main class="w-full h-full flex justify-center items-center ">
-            <div class="max-w-5xl relative">
+        <main class="w-[65%] 2xl:w-full h-full flex justify-start 2xl:justify-center items-center">
+            <div class="w-full 2xl:max-w-5xl relative">
+                <!-- Top of page mobile -->
+                <section id="top-mobile" class="2xl:hidden flex justify-between items-center w-full h-44 fixed">
+                    <p class="pl-6 text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">Cryon V2 <span id="yearNowTop" class="text-3xl"></span></p>
+                </section>
                 <!-- Home section -->
-                <section id="home" class="px-44">
-                    <img src="./assets/Palette.png" alt="Palette" class="absolute top-0 -right-[15%] shadow-xl">
-                    <img src="./assets/heliconia.jpeg" alt="Heliconia" class="max-w-xl rounded-b-2xl shadow-2xl">
-                    <div class="py-12 text-white font-normal flex flex-col items-center ">
-                        <h1
-                            class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-[8rem] drop-shadow-lg">
-                            Welcome</h1>
-                        <div class="w-full flex justify-end">
-                            <p class="text-2xl text-right w-[500px]">
-                                <span class="text-5xl text-accent font-bold ">Hi</span>, this website was created to
-                                store my
-                                project
+                <section id="home" class="2xl:px-44 pt-44 2xl:pt-0">
+                    <img src="./assets/Palette.png" alt="Palette" class="hidden lg:block absolute top-0 right-[0%] 2xl:-right-[15%] shadow-xl">
+                    <img src="./assets/heliconia.jpeg" alt="Heliconia" class="sm:max-w-lg 2xl:max-w-xl 2xl:rounded-b-2xl 2xl:rounded-tr-none rounded-r-2xl shadow-2xl">
+                    <div class="w-full py-12 text-white font-normal flex flex-col items-center">
+                        <h1 class="hidden lg:block bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-[8rem] drop-shadow-lg"> Welcome</h1>
+                        <div class="w-full pl-24 flex justify-end">
+                            <p class="text-2xl lg:text-4xl text-right w-[500px]">
+                                <span class="text-5xl text-accent font-bold ">Hi</span>, this website was created to store my project
                             </p>
                         </div>
-                        <div class="w-full flex items-start">
-                            <p class="text-[20px] text-left font-light w-[400px] -mt-5">
+                        <div class="w-full pl-24 mt-12 flex items-start">
+                            <p class="text-base lg:text-2xl text-left font-light">
                                 You may also view a gallery of images that I took with my smartphone.
                             </p>
                         </div>
                     </div>
                 </section>
                 <!-- Collection section -->
-                <section id="collection" class="px-16 py-24">
-                    <div class="collection-page" id="collection-page">
+                <section id="collection" class="lg:px-16 py-24">
+                    <div id="collection-page" class="collection-page">
 
                     </div>
                 </section>
                 <!-- Project section -->
-                <section id="project">
-                    <div class="px-16 py-24 snap-mandatory snap-both h-[900px] overflow-y-scroll bar">
-                        <div class="w-full h-full snap-always snap-center border-r-2 border-white">
+                <section id="project" class="pl-10 lg:px-16 py-24">
+                    <div class="snap-mandatory snap-both lg:h-[900px] overflow-y-scroll bar">
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
                             <a href="https://maulanafatullah.my.id/" target="_blank" rel="noopener"
-                                class="w-full h-full py-16 px-10 flex flex-col font-jost text-white group scale-50 hover:scale-100 transition-main">
-                                <div class="w-full h-full flex justify-center items-center relative shadow-2xl">
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-50 hover:scale-100 transition-main">
+                                <div class="w-full h-full flex flex-col justify-center items-start lg:items-center relative shadow-2xl">
+                                    <h1 class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-[6rem] group-hover:opacity-0 transition-main"> Cryon</h1>
                                     <picture>
                                         <source media="(min-width:1200px)"
                                             srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/1.png">
@@ -78,14 +78,11 @@
                                         <img src="https://ik.imagekit.io/maulanafatullah/Web_Design/1.png" alt="Cryon">
                                     </picture>
                                     <div
-                                        class="project-overlay z-10 w-full h-full absolute inset-0 bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
+                                        class="project-overlay z-10 w-full h-full absolute inset-0 lg:bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
                                     </div>
-                                    <h1
-                                        class="z-20 absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 text-[6rem] group-hover:opacity-0 transition-main">
-                                        Cryon</h1>
                                 </div>
                                 <p
-                                    class="-z-10 text-3xl py-6 leading-[150%] text-right -translate-y-[100%] opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 leading- tracking-wide[150%] text-right lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
                                     This is my first project for an online education school as well as my personal
                                     website, and
                                     I'm simply using HTML, CSS, and JavaScript. I plan to redesign my website shortly
@@ -94,10 +91,11 @@
                                 </p>
                             </a>
                         </div>
-                        <div class="w-full h-full snap-always snap-center  border-r-2 border-white">
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
                             <a href="https://maulanafatullah.my.id/inBeach" target="_blank" rel="noopener"
-                                class="w-full h-full py-16 px-10 flex flex-col font-jost text-white group scale-50 hover:scale-100 transition-main">
-                                <div class="w-full h-full flex justify-center items-center relative shadow-2xl">
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-50 hover:scale-100 transition-main">
+                                <div class="w-full h-full flex flex-col justify-center items-end lg:items-center relative shadow-2xl">
+                                    <h1 class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-[6rem] group-hover:opacity-0 transition-main">inBeach</h1>
                                     <picture>
                                         <source media="(min-width:1200px)"
                                             srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/2.png">
@@ -109,14 +107,11 @@
                                             alt="inBeach">
                                     </picture>
                                     <div
-                                        class="project-overlay z-10 w-full h-full absolute inset-0 bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
+                                        class="project-overlay z-10 w-full h-full absolute inset-0 lg:bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
                                     </div>
-                                    <h1
-                                        class="z-20 absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 text-[6rem] group-hover:opacity-0 transition-main">
-                                        inBeach</h1>
                                 </div>
                                 <p
-                                    class="-z-10 text-3xl py-6 leading-[150%] -translate-y-[100%] opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 leading- tracking-wide[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
                                     By manipulating the DOM and animating some of the website's elements, I was able to
                                     enhance
                                     my JavaScript and CSS skills while creating this website. Unfortunately, I was
@@ -125,10 +120,11 @@
                                 </p>
                             </a>
                         </div>
-                        <div class="w-full h-full snap-always snap-center  border-r-2 border-white">
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
                             <a href="https://maulanafatullah.my.id/pottahands-barbershop" target="_blank" rel="noopener"
-                                class="w-full h-full py-16 px-10 flex flex-col font-jost text-white group scale-50 hover:scale-100 transition-main">
-                                <div class="w-full h-full flex justify-center items-center relative shadow-2xl">
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-50 hover:scale-100 transition-main">
+                                <div class="w-full h-full flex flex-col justify-center items-start lg:items-center relative shadow-2xl">
+                                    <h1 class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-[6rem] group-hover:opacity-0 transition-main">Pottahands</h1>
                                     <picture>
                                         <source media="(min-width:1200px)"
                                             srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/3.png">
@@ -140,24 +136,22 @@
                                             alt="Pottahands">
                                     </picture>
                                     <div
-                                        class="project-overlay z-10 w-full h-full absolute inset-0 bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
+                                        class="project-overlay z-10 w-full h-full absolute inset-0 lg:bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
                                     </div>
-                                    <h1
-                                        class="z-20 absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 text-[6rem] group-hover:opacity-0 transition-main">
-                                        Pottahands</h1>
                                 </div>
                                 <p
-                                    class="-z-10 text-3xl py-6 leading-[150%] text-right -translate-y-[100%] opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 leading- tracking-wide[150%] text-right lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
                                     For my friend's barbershop, I made him this website to promote it. In addition to
                                     learning
                                     TailwindCSS, I utilize it to finish this website.
                                 </p>
                             </a>
                         </div>
-                        <div class="w-full h-full snap-always snap-center  border-r-2 border-white">
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
                             <a href="https://maulanafatullah.my.id/tre-elevator" target="_blank" rel="noopener"
-                                class="w-full h-full py-16 px-10 flex flex-col font-jost text-white group scale-50 hover:scale-100 transition-main">
-                                <div class="w-full h-full flex justify-center items-center relative shadow-2xl">
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-50 hover:scale-100 transition-main">
+                                <div class="w-full h-full flex flex-col justify-center items-end lg:items-center relative shadow-2xl">
+                                    <h1 class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-[6rem] group-hover:opacity-0 transition-main">TRE Elevator</h1>
                                     <picture>
                                         <source media="(min-width:1200px)"
                                             srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/4.png">
@@ -169,14 +163,11 @@
                                             alt="TRE Elevator">
                                     </picture>
                                     <div
-                                        class="project-overlay z-10 w-full h-full absolute inset-0 bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
+                                        class="project-overlay z-10 w-full h-full absolute inset-0 lg:bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
                                     </div>
-                                    <h1
-                                        class="z-20 absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 text-[6rem] group-hover:opacity-0 transition-main">
-                                        TRE Elevator</h1>
                                 </div>
                                 <p
-                                    class="-z-10 text-3xl py-6 leading-[150%] -translate-y-[100%] opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 leading- tracking-wide[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
                                     I was making an attempt to revamp the website for the business where my aunt works.
                                     By the
                                     way, if you require services from this business, you may also get in touch with me.
@@ -185,10 +176,11 @@
                                 </p>
                             </a>
                         </div>
-                        <div class="w-full h-full snap-always snap-center  border-r-2 border-white">
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
                             <a href="https://maulanafatullah.my.id/dinda" target="_blank" rel="noopener"
-                                class="w-full h-full py-16 px-10 flex flex-col font-jost text-white group scale-50 hover:scale-100 transition-main">
-                                <div class="w-full h-full flex justify-center items-center relative shadow-2xl">
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-50 hover:scale-100 transition-main">
+                                <div class="w-full h-full flex flex-col justify-center items-start lg:items-center relative shadow-2xl">
+                                    <h1 class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-[6rem] group-hover:opacity-0 transition-main"> Dinda</h1>
                                     <picture>
                                         <source media="(min-width:1200px)"
                                             srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/5.png">
@@ -200,14 +192,11 @@
                                             alt="Dinda's Website">
                                     </picture>
                                     <div
-                                        class="project-overlay z-10 w-full h-full absolute inset-0 bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
+                                        class="project-overlay z-10 w-full h-full absolute inset-0 lg:bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
                                     </div>
-                                    <h1
-                                        class="z-20 absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 text-[6rem] group-hover:opacity-0 transition-main">
-                                        Dinda</h1>
                                 </div>
                                 <p
-                                    class="-z-10 text-3xl text-right py-6 leading-[150%] -translate-y-[100%] opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 text-right tracking-wide leading-[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
                                     This is my first project for an online education school as well as my personal
                                     website, and
                                     I'm simply using HTML, CSS, and JavaScript. I plan to redesign my website shortly
@@ -216,10 +205,11 @@
                                 </p>
                             </a>
                         </div>
-                        <div class="w-full h-full snap-always snap-center border-r-2 border-white">
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
                             <a href="https://maulanafatullah.my.id/hoobank" target="_blank" rel="noopener"
-                                class="w-full h-full py-16 px-10 flex flex-col font-jost text-white group scale-50 hover:scale-100 transition-main">
-                                <div class="w-full h-full flex justify-center items-center relative shadow-2xl">
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-50 hover:scale-100 transition-main">
+                                <div class="w-full h-full flex flex-col justify-center items-end lg:items-center relative shadow-2xl">
+                                    <h1 class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-[6rem] group-hover:opacity-0 transition-main"> Hoobank</h1>
                                     <picture>
                                         <source media="(min-width:1200px)"
                                             srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/6.png">
@@ -231,14 +221,11 @@
                                             alt="Hoobank">
                                     </picture>
                                     <div
-                                        class="project-overlay z-10 w-full h-full absolute inset-0 bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
+                                        class="project-overlay z-10 w-full h-full absolute inset-0 lg:bg-dark bg-opacity-40 group-hover:bg-opacity-0 transition-main">
                                     </div>
-                                    <h1
-                                        class="z-20 absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 text-[6rem] group-hover:opacity-0 transition-main">
-                                        Hoobank</h1>
                                 </div>
                                 <p
-                                    class="-z-10 text-3xl py-6 leading-[150%] -translate-y-[100%] opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 leading- tracking-wide[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
                                     Actually, when studying about ReactJS and utilizing Vite for Tools, I copied this
                                     webpage
                                     from the YouTube channel of JavaScript Mastery. This website also includes
@@ -252,7 +239,7 @@
                     </div>
                 </section>
                 <!-- About section -->
-                <section id="about" class="px-16 py-24">
+                <section id="about" class="pl-10 lg:px-16 py-24">
                     <div class="w-full flex flex-col">
                         <div class="w-full py-6 flex flex-col">
                             <div class="w-full flex p-6 background-gradient shadow-2xl rounded-xl">
@@ -314,7 +301,7 @@
                     </div>
                 </section>
                 <!-- Expertise section -->
-                <section id="expertise" class="px-16 py-24">
+                <section id="expertise" class="pl-10 lg:px-16 py-24">
                     <div class="w-full h-full flex flex-wrap gap-10 justify-between items-center">
                         <a href="https://www.google.com/search?q=html" target="_blank" rel="noopener" class="application-expertise">
                             <img src="./assets/Application/html5.svg" alt="HTML" class="w-1/2">
@@ -359,7 +346,7 @@
                     </div>
                 </section>
                 <!-- Footer section -->
-                <section id="footer" class="px-16 py-24 text-white">
+                <section id="footer" class="pl-10 lg:px-16 py-24 text-white">
                     <h1 class="text-5xl">Do you need a website or a design for your personal or business use ?</h1>
                     <p class="text-2xl font-light py-4">I can create Website template, UI/UX design or Graphic design. Hit the button below to place your order.</p>
                     <a  href="https://www.fiverr.com/maulanafatullah" target="_blank" rel="noopener" >
@@ -377,10 +364,9 @@
             </div>
         </main>
 <!-- Aside -->
-        <aside
-            class="max-w-1/4 h-full flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight pt-20 pb-60 tracking-wide">
-            <h1 class="text-2xl" id="dateNow"></h1>
-            <p class="text-[4rem] -rotate-90 ">Cryon V2 <span class="text-3xl">©2023</span></p>
+        <aside class="w-[30%] px-[2.5%] 2xl:max-w-1/4 h-full flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-60 ">
+            <h1 class="text-xl md:text-2xl" id="dateNow"></h1>
+            <p class="w-96 text-[4rem] -rotate-90">Cryon V2 <span id="yearNow" class="text-3xl"></span></p>
         </aside>
 
         <script src="./js/CryDate.js"></script>
