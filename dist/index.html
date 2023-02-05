@@ -1,70 +1,431 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="p:domain_verify" content="d4cd72bfa816313bebe81906bf9b2a70" />
         <title>Cryon</title>
-        <link rel="stylesheet" href="css/output.css">
+        <link rel="stylesheet" href="./css/output.css">
     </head>
 
-    <body>
+    <body class="bar">
+        <!-- Background  -->
         <div class="background">
             <img src="./assets/Bg.png" alt="Background">
         </div>
 
-        <nav class="flex flex-col justify-around w-1/4 h-screen fixed">
+        <!-- Navigation menu -->
+        <nav class="hidden 2xl:flex flex-col justify-around w-1/4 h-screen fixed">
             <div class="nav-list w-full flex flex-col justify-center items-left gap-10 pt-16 pb-36 relative">
                 <a href="#home" class="text-white text-3xl font-light font-jost ml-20">Home</a>
                 <a href="#collection" class="text-white text-3xl font-light font-jost ml-20">Collection</a>
                 <a href="#project" class="text-white text-3xl font-light font-jost ml-20">Project</a>
                 <a href="#about" class="text-white text-3xl font-light font-jost ml-20">About</a>
+                <a href="#expertise" class="text-white text-3xl font-light font-jost ml-20">Expertise</a>
             </div>
             <div class="name-tag mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
                 <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana
                     Fatullah</span>
             </div>
         </nav>
-
-        <main class="w-full h-full flex justify-center items-center">
-            <div class="max-w-5xl relative">
-                <section class="px-44">
-                    <img src="./assets/Palette.png" alt="Palette" class="absolute top-0 -right-[15%] shadow-xl">
-                    <img src="./assets/heliconia.jpeg" alt="Palette" class="max-w-xl rounded-b-2xl shadow-2xl">
-                    <div class="py-12 text-white font-normal flex flex-col items-center ">
-                        <h1 class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-[8rem] drop-shadow-lg">Welcome</h1>
-                        <div class="w-full flex justify-end">
-                            <p class="text-2xl text-right w-[500px]">
-                                <span class="text-5xl text-accent font-bold ">Hi</span>, this website was created to store my
-                                project
+        <!-- Main -->
+        <main class="w-[65%] 2xl:w-full h-full flex justify-start 2xl:justify-center items-center">
+            <div class="w-full 2xl:max-w-5xl relative">
+                <!-- Top of page mobile -->
+                <section id="top-mobile" class="2xl:hidden flex justify-between items-center w-full h-44 fixed">
+                    <p class="pl-6 text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">Cryon
+                        V2 <span id="yearNowTop" class="text-3xl"></span></p>
+                </section>
+                <!-- Home section -->
+                <section id="home" class="2xl:px-44 pt-44 2xl:pt-0">
+                    <img src="./assets/Palette.png" alt="Palette"
+                        class="hidden lg:block absolute top-0 right-[0%] 2xl:-right-[15%] shadow-xl">
+                    <img src="./assets/heliconia.jpeg" alt="Heliconia"
+                        class="sm:max-w-lg 2xl:max-w-xl 2xl:rounded-b-2xl 2xl:rounded-tr-none rounded-r-2xl shadow-2xl">
+                    <div class="w-full py-12 text-white font-normal flex flex-col items-center">
+                        <h1
+                            class="hidden lg:block bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-[8rem] drop-shadow-lg">
+                            Welcome</h1>
+                        <div class="w-full pl-24 flex justify-end">
+                            <p class="text-2xl lg:text-4xl text-right w-[500px]">
+                                <span class="text-5xl text-accent font-bold ">Hi</span>, this website was created to
+                                store my project
                             </p>
                         </div>
-                        <div class="w-full flex items-start">
-                            <p class="text-[20px] text-left font-light w-[400px] -mt-5">
+                        <div class="w-full pl-24 mt-12 flex items-start">
+                            <p class="text-base lg:text-2xl text-left font-light">
                                 You may also view a gallery of images that I took with my smartphone.
                             </p>
                         </div>
                     </div>
                 </section>
+                <!-- Collection section -->
+                <section id="collection" class="lg:px-16 py-24">
+                    <div id="collection-page" class="collection-page">
 
-                <section id="collection" class="px-16 py-24">
-                        <div class="collection-page" id="collection-page">
-                            
+                    </div>
+                </section>
+                <!-- Project section -->
+                <section id="project" class="pl-5 lg:pl-10 lg:px-16 py-24">
+                    <div class="snap-mandatory snap-both lg:h-[900px] overflow-y-scroll bar">
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
+                            <a href="https://maulanafatullah.my.id/" target="_blank" rel="noopener"
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-75 hover:scale-100 transition-main">
+                                <div
+                                    class="w-full h-full flex flex-col justify-center items-start lg:items-center relative ">
+                                    <h1
+                                        class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
+                                        Cryon</h1>
+                                    <picture class="lg:shadow-2xl relative">
+                                        <div class="w-full h-full bg-dark backdrop-blur-sm group-hover:backdrop-blur-0 bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+
+                                        </div>
+                                        <source media="(min-width:1200px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/1.png">
+                                        <source media="(min-width:800px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-800/1.png">
+                                        <source media="(min-width:400px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-400/1.png">
+                                        <img src="https://ik.imagekit.io/maulanafatullah/Web_Design/1.png" alt="Cryon">
+                                    </picture>
+                                </div>
+                                <p
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 tracking-wide leading-[150%] lg:text-right lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    This is my first project for an online education school as well as my personal
+                                    website, and
+                                    I'm simply using HTML, CSS, and JavaScript. I plan to redesign my website shortly
+                                    using
+                                    TailwindCSS.
+                                </p>
+                            </a>
                         </div>
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
+                            <a href="https://maulanafatullah.my.id/inBeach" target="_blank" rel="noopener"
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-75 hover:scale-100 transition-main">
+                                <div
+                                    class="w-full h-full flex flex-col justify-center items-start lg:items-center relative ">
+                                    <h1
+                                        class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
+                                        inBeach</h1>
+                                    <picture class="lg:shadow-2xl relative">
+                                        <div class="w-full h-full bg-dark backdrop-blur-sm group-hover:backdrop-blur-0 bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+
+                                        </div>
+                                        <source media="(min-width:1200px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/2.png">
+                                        <source media="(min-width:800px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-800/2.png">
+                                        <source media="(min-width:400px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-400/2.png">
+                                        <img src="https://ik.imagekit.io/maulanafatullah/Web_Design/2.png"
+                                            alt="inBeach">
+                                    </picture>
+                                </div>
+                                <p
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 tracking-wide leading-[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    By manipulating the DOM and animating some of the website's elements, I was able to
+                                    enhance
+                                    my JavaScript and CSS skills while creating this website. Unfortunately, I was
+                                    unable to use
+                                    API for this website despite my best efforts.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
+                            <a href="https://maulanafatullah.my.id/pottahands-barbershop" target="_blank" rel="noopener"
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-75 hover:scale-100 transition-main">
+                                <div
+                                    class="w-full h-full flex flex-col justify-center items-start lg:items-center relative ">
+                                    <h1
+                                        class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
+                                        Pottahands</h1>
+                                    <picture class="lg:shadow-2xl relative">
+                                        <div class="w-full h-full bg-dark backdrop-blur-sm group-hover:backdrop-blur-0 bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+
+                                        </div>
+                                        <source media="(min-width:1200px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/3.png">
+                                        <source media="(min-width:800px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-800/3.png">
+                                        <source media="(min-width:400px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-400/3.png">
+                                        <img src="https://ik.imagekit.io/maulanafatullah/Web_Design/3.png"
+                                            alt="Pottahands">
+                                    </picture>
+                                </div>
+                                <p
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 tracking-wide leading-[150%] lg:text-right lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    For my friend's barbershop, I made him this website to promote it. In addition to
+                                    learning
+                                    TailwindCSS, I utilize it to finish this website.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
+                            <a href="https://maulanafatullah.my.id/tre-elevator" target="_blank" rel="noopener"
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-75 hover:scale-100 transition-main">
+                                <div
+                                    class="w-full h-full flex flex-col justify-center items-start lg:items-center relative ">
+                                    <h1
+                                        class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
+                                        TRE Elevator</h1>
+                                    <picture class="lg:shadow-2xl relative">
+                                        <div class="w-full h-full bg-dark backdrop-blur-sm group-hover:backdrop-blur-0 bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+
+                                        </div>
+                                        <source media="(min-width:1200px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/4.png">
+                                        <source media="(min-width:800px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-800/4.png">
+                                        <source media="(min-width:400px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-400/4.png">
+                                        <img src="https://ik.imagekit.io/maulanafatullah/Web_Design/4.png"
+                                            alt="TRE Elevator">
+                                    </picture>
+                                </div>
+                                <p
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 tracking-wide leading-[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    I was making an attempt to revamp the website for the business where my aunt works.
+                                    By the
+                                    way, if you require services from this business, you may also get in touch with me.
+                                    <br>
+                                    <br>
+                                    <span>https://tre-elevator.co.id/</span> this is the official website of this company.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
+                            <a href="https://maulanafatullah.my.id/dinda" target="_blank" rel="noopener"
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-75 hover:scale-100 transition-main">
+                                <div
+                                    class="w-full h-full flex flex-col justify-center items-start lg:items-center relative ">
+                                    <h1
+                                        class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
+                                        Dinda</h1>
+                                    <picture class="lg:shadow-2xl relative">
+                                        <div class="w-full h-full bg-dark backdrop-blur-sm group-hover:backdrop-blur-0 bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+
+                                        </div>
+                                        <source media="(min-width:1200px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/5.png">
+                                        <source media="(min-width:800px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-800/5.png">
+                                        <source media="(min-width:400px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-400/5.png">
+                                        <img src="https://ik.imagekit.io/maulanafatullah/Web_Design/5.png"
+                                            alt="Dinda's Website">
+                                    </picture>
+                                </div>
+                                <p
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 lg:text-right tracking-wide leading-[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    This is my first project for an online education school as well as my personal
+                                    website, and
+                                    I'm simply using HTML, CSS, and JavaScript. I plan to redesign my website shortly
+                                    using
+                                    TailwindCSS.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white">
+                            <a href="https://maulanafatullah.my.id/hoobank" target="_blank" rel="noopener"
+                                class="w-full h-full py-16 lg:px-10 flex flex-col font-jost text-white group lg:scale-75 hover:scale-100 transition-main">
+                                <div
+                                    class="w-full h-full flex flex-col justify-center items-start lg:items-center relative ">
+                                    <h1
+                                        class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
+                                        Hoobank</h1>
+                                    <picture class="lg:shadow-2xl relative">
+                                        <div class="w-full h-full bg-dark backdrop-blur-sm group-hover:backdrop-blur-0 bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+
+                                        </div>
+                                        <source media="(min-width:1200px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-1200/6.png">
+                                        <source media="(min-width:800px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-800/6.png">
+                                        <source media="(min-width:400px)"
+                                            srcset="https://ik.imagekit.io/maulanafatullah/Web_Design/tr:w-400/6.png">
+                                        <img src="https://ik.imagekit.io/maulanafatullah/Web_Design/6.png"
+                                            alt="Hoobank">
+                                    </picture>
+                                </div>
+                                <p
+                                    class="-z-10 font-normal text-xl lg:text-3xl py-6 tracking-wide leading-[150%] lg:-translate-y-[100%] lg:opacity-0 group-hover:-translate-y-0 transition-main group-hover:opacity-100">
+                                    Actually, when studying about ReactJS and utilizing Vite for Tools, I copied this
+                                    webpage
+                                    from the YouTube channel of JavaScript Mastery. This website also includes
+                                    TailwindCSS. I
+                                    was attempting to animate scrolling movement using the GSAP Plugin after I had built
+                                    the
+                                    website.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- About section -->
+                <section id="about" class="w-full h-full pl-5 lg:pl-10 lg:px-16 py-24">
+                    <div class="w-full h-full flex justify-center items-center flex-col">
+                        <div class="w-full py-6 xl:flex flex-col relative">
+                            <div
+                                class="w-full xl:flex justify-center items-center p-6 background-gradient shadow-2xl rounded-xl">
+                                <picture
+                                    class="w-1/2 xl:w-auto mr-6 xl:mr-0 hidden lg:float-left lg:inline-block h-fit">
+                                    <source media="(min-width:1200px)"
+                                        srcset="https://ik.imagekit.io/maulanafatullah/Mine/tr:w-1200/IMG_20210828_195103__2_.jpg">
+                                    <source media="(min-width:800px)"
+                                        srcset="https://ik.imagekit.io/maulanafatullah/Mine/tr:w-800/IMG_20210828_195103__2_.jpg">
+                                    <source media="(min-width:400px)"
+                                        srcset="https://ik.imagekit.io/maulanafatullah/Mine/tr:w-400/IMG_20210828_195103__2_.jpg">
+                                    <img src="https://ik.imagekit.io/maulanafatullah/Mine/IMG_20210828_195103__2_.jpg"
+                                        alt="Maulana Fatullah standing in the dark with mask and holding pouch">
+                                </picture>
+                                <p
+                                    class="xl:px-10 text-white text-justify text-xl lg:text-2xl leading-8 font-light tracking-wider">
+                                    Hi it’s me, <span class="font-bold">Maulana Fatullah</span>. In order to return to
+                                    the
+                                    digital world for my profession,
+                                    I'm presently studying Front-end Web Development and UI/UX Design.
+                                    <br><br>
+                                    I have worked in the food service sector for more than three years as a food
+                                    handler.
+                                    and am accountable for handling food in a sanitary and safe manner.
+                                    <br><br>
+                                    You may order a website similar to this one or another one, though. If you'd like to
+                                    place an order, please get in touch with me.
+                                </p>
+                            </div>
+                            <div
+                                class="flex flex-col xl:flex-row justify-center py-16 absolute xl:static -right-1/3 top-0">
+                                <a href="https://bit.ly/maulanafatullah-linkedin" class="group -mx-2 transition-main"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/Social Media/icon_linkedin.svg" alt="LinkedIn Icon"
+                                        class="group-hover:mx-10 group-hover:translate-y-10 transition-main">
+                                </a>
+                                <a href="https://bit.ly/maulanafatullah-instagram" class="group -mx-2 transition-main"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/Social Media/icon_instagram.svg" alt="Instagram Icon"
+                                        class="group-hover:mx-10 group-hover:translate-y-10 transition-main">
+                                </a>
+                                <a href="https://bit.ly/maulanafatullah-facebook" class="group -mx-2 transition-main"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/Social Media/icon_facebook.svg" alt="Facebook Icon"
+                                        class="group-hover:mx-10 group-hover:translate-y-10 transition-main">
+                                </a>
+                                <a href="https://bit.ly/maulanafatullah-github" class="group -mx-2 transition-main"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/Social Media/icon_github.svg" alt="GitHub Icon"
+                                        class="group-hover:mx-10 group-hover:translate-y-10 transition-main">
+                                </a>
+                                <a href="https://bit.ly/maulanafatullah-pinterest" class="group -mx-2 transition-main"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/Social Media/icon_pinterest.svg" alt="Pinterest Icon"
+                                        class="group-hover:mx-10 group-hover:translate-y-10 transition-main">
+                                </a>
+                                <a href="https://bit.ly/maulanafatullah-discord" class="group -mx-2 transition-main"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/Social Media/icon_discord.svg" alt="Discord Icon"
+                                        class="group-hover:mx-10 group-hover:translate-y-10 transition-main">
+                                </a>
+                                <a href="https://bit.ly/maulanafatullah-dribbble" class="group -mx-2 transition-main"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/Social Media/icon_dribbble.svg" alt="Dribbble Icon"
+                                        class="group-hover:mx-10 group-hover:translate-y-10 transition-main">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Expertise section -->
+                <section id="expertise" class="pl-5 lg:pl-10 lg:px-16 py-24">
+                    <div class="w-full h-full flex flex-1 flex-wrap gap-5 xl:gap-10 justify-between items-center">
+                        <a href="https://www.google.com/search?q=html" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/html5.svg" alt="HTML" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=css" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/css3.svg" alt="CSS" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=javascript" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/js.svg" alt="JavaScript" class="w-1/2">
+                        </a>
+
+                        <a href="https://www.google.com/search?q=tailwind" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/tailwind.svg" alt="TailwindCSS" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=reactjs" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/reactjs.svg" alt="ReactJS" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=github" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/github.svg" alt="GitHub" class="w-1/2">
+                        </a>
+
+                        <a href="https://www.google.com/search?q=git" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/git.svg" alt="Git" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=vscode" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/vscode.svg" alt="VSCode" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=adobe%20lightroom" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/lightroom.svg" alt="Adobe Lightroom" class="w-1/2">
+                        </a>
+
+                        <a href="https://www.google.com/search?q=snapseed" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/snapseed.svg" alt="Snapseed" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=figma" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/figma.svg" alt="Figma" class="w-1/2">
+                        </a>
+                        <a href="https://www.google.com/search?q=notion" target="_blank" rel="noopener"
+                            class="application-expertise">
+                            <img src="./assets/Application/notion.svg" alt="Notion" class="w-1/2">
+                        </a>
+
+                    </div>
+                </section>
+                <!-- Footer section -->
+                <section id="footer" class="pl-5 lg:pl-10 lg:px-16 py-24 text-white">
+                    <h1 class="text-5xl">Do you need a website or a design for your personal or business use ?</h1>
+                    <p class="text-2xl font-light py-4">I can create Website template, UI/UX design or Graphic design.
+                        Hit the button below to place your order.</p>
+                    <a href="https://www.fiverr.com/maulanafatullah" target="_blank" rel="noopener" class="call-to-action group">
+                        <button
+                            class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative group transition-main">
+                            <span class="z-30 bg-white p-2">Order now</span>
+                            <div
+                                class="order-arrow px-2 -translate-x-[200%] group-hover:-translate-x-1/2 transition-main">
+                                <span></span>
+                                <span class="rotate-0 group-hover:rotate-45 transition-main"></span>
+                                <span class="rotate-0 group-hover:-rotate-45 transition-main"></span>
+                            </div>
+                        </button>
+                        <span class="z-10 text-lg tracking-wider inline-block pt-6 scale-0 -translate-y-full -translate-x-1/2 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 text-light group-hover:animate-pulse group-hover:text-white transition-main">*Please contact me before place your order</span>
+                    </a>
                 </section>
             </div>
         </main>
-
+        <!-- Aside -->
         <aside
-            class="max-w-1/4 h-full flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight pt-20 pb-60 tracking-wide">
-            <h1 class="text-2xl">Home</h1>
-            <p class="text-[4rem] -rotate-90 ">Cryon V2 <span class="text-3xl">©2023</span></p>
+            class="w-[30%] px-[2.5%] 2xl:max-w-1/4 h-full flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-60 ">
+            <div class="flex flex-col justify-between items-center h-full">
+                <h1 class="text-xl md:text-2xl" id="dateNow"></h1>
+                <p class="w-96 text-[4rem] -rotate-90 hidden xl:inline">Cryon V2 <span id="yearNow"
+                        class="text-3xl"></span></p>
+            </div>
         </aside>
 
-        <footer>
-
-        </footer>
+        <script src="./js/CryDate.js"></script>
         <script src="./js/CryCollection.js"></script>
     </body>
 

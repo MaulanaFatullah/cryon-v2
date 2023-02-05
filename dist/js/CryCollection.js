@@ -1,10 +1,6 @@
 const navButton = document.querySelector('.nav-btn');
 const navMobile = document.querySelector('.nav-mobile');
 
-const profileModal = document.querySelector('#modal-profile');
-const openProfileModal = document.querySelector('.btn-profile-box');
-const closeProfileModal = document.querySelector('.btn-close-profile');
-
 // ---------------------------------------------------------------
 
 
