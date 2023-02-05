@@ -26,36 +26,35 @@
                 <a href="#expertise" class="text-white text-3xl font-light font-jost ml-20">Expertise</a>
             </div>
             <div class="name-tag mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
-                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana
-                    Fatullah</span>
+                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana Fatullah</span>
             </div>
         </nav>
         <!-- Main -->
         <main class="w-[65%] 2xl:w-full h-full flex justify-start 2xl:justify-center items-center">
             <div class="w-full 2xl:max-w-5xl relative">
                 <!-- Top of page mobile -->
-                <section id="top-mobile" class="2xl:hidden flex justify-between items-center w-full h-44 fixed">
+                <section id="top-mobile" class="z-[98271469] 2xl:hidden flex justify-between items-center w-full h-44 mix-blend-exclusion fixed">
                     <p class="pl-6 text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">Cryon
                         V2 <span id="yearNowTop" class="text-3xl"></span></p>
                 </section>
                 <!-- Home section -->
-                <section id="home" class="2xl:px-44 pt-44 2xl:pt-0">
+                <section id="home" class="2xl:px-32 pt-44 2xl:pt-0">
                     <img src="./assets/Palette.png" alt="Palette"
-                        class="hidden lg:block absolute top-0 right-[0%] 2xl:-right-[15%] shadow-xl">
-                    <img src="./assets/heliconia.jpeg" alt="Heliconia"
-                        class="sm:max-w-lg 2xl:max-w-xl 2xl:rounded-b-2xl 2xl:rounded-tr-none rounded-r-2xl shadow-2xl">
+                        class="hidden lg:block absolute top-0 right-0 2xl:right-14 shadow-xl">
+                        <!-- Main image -->
+                    <img src="./assets/heliconia.jpeg" alt="Heliconia" class="w-full sm:max-w-xl 2xl:max-w-xl 2xl:rounded-b-2xl 2xl:rounded-tr-none rounded-r-2xl drop-shadow-2xl overflow-hidden mr-16">
                     <div class="w-full py-12 text-white font-normal flex flex-col items-center">
                         <h1
-                            class="hidden lg:block bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-[8rem] drop-shadow-lg">
+                            class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-7xl xl:text-[8rem] drop-shadow-lg">
                             Welcome</h1>
-                        <div class="w-full pl-24 flex justify-end">
+                        <div class="w-full pl-8 lg:pl-16 flex justify-center xl:justify-end">
                             <p class="text-2xl lg:text-4xl text-right w-[500px]">
                                 <span class="text-5xl text-accent font-bold ">Hi</span>, this website was created to
                                 store my project
                             </p>
                         </div>
-                        <div class="w-full pl-24 mt-12 flex items-start">
-                            <p class="text-base lg:text-2xl text-left font-light">
+                        <div class="w-full pl-8 lg:pl-16 2xl:pl-0 mt-12 flex justify-center 2xl:justify-start">
+                            <p class="max-w-lg 2xl:max-w-xl text-base sm:text-xl lg:text-2xl text-left font-light">
                                 You may also view a gallery of images that I took with my smartphone.
                             </p>
                         </div>
@@ -63,6 +62,13 @@
                 </section>
                 <!-- Collection section -->
                 <section id="collection" class="lg:px-16 py-24">
+                    <div class="w-full flex flex-col justify-center items-center">
+                        <div class="w-6 h-5 lg:h-10 flex flex-col justify-center items-center bg-white relative rounded-lg lg:rounded-xl lg:mix-blend-screen">
+                            <span class="lg:w-1/5 lg:h-1/2 w-2 h-5 bg-white lg:bg-black rounded-lg lg:rounded-full absolute -top-2/3 right-2/3 lg:right-auto lg:top-0 lg:mix-blend-multiply"></span>
+                        </div>
+                        <span class="text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
+                        <span class="text-white pt-4 tracking-wide font-light lg:hidden">Swipe here</span>
+                    </div>
                     <div id="collection-page" class="collection-page">
 
                     </div>
@@ -282,7 +288,7 @@
                                         alt="Maulana Fatullah standing in the dark with mask and holding pouch">
                                 </picture>
                                 <p
-                                    class="xl:px-10 text-white text-justify text-xl lg:text-2xl leading-8 font-light tracking-wider">
+                                    class="xl:px-10 text-white break-words text-xl lg:text-2xl leading-8 font-light tracking-wider">
                                     Hi it’s me, <span class="font-bold">Maulana Fatullah</span>. In order to return to
                                     the
                                     digital world for my profession,
@@ -416,17 +422,25 @@
             </div>
         </main>
         <!-- Aside -->
-        <aside
-            class="w-[30%] px-[2.5%] 2xl:max-w-1/4 h-full flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-60 ">
-            <div class="flex flex-col justify-between items-center h-full">
+        <aside class=" w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
+            <div class="w-full h-full flex flex-col justify-between items-center">
                 <h1 class="text-xl md:text-2xl" id="dateNow"></h1>
-                <p class="w-96 text-[4rem] -rotate-90 hidden xl:inline">Cryon V2 <span id="yearNow"
-                        class="text-3xl"></span></p>
+                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2 <span id="yearNow" class="text-3xl"></span></p>
+            </div>
+            <div class="w-max h-full flex flex-col justify-center 2xl:hidden">
+                <div class="w-max h-full name-tag flex flex-col justify-center items-end text-primary text-2xl font-light ">
+                    <span class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90">Maulana Fatullah</span>
+                </div>
+                <div class="w-full h-1/6 nav-mobile-btn flex justify-center items-center relative cursor-pointer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </aside>
 
-        <script src="./js/CryDate.js"></script>
-        <script src="./js/CryCollection.js"></script>
+        <script src="./js/CryDate.js" type="module"></script>
+        <script src="./js/CryCollection.js" type="module"></script>
     </body>
 
 </html>
