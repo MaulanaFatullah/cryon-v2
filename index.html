@@ -7,13 +7,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="p:domain_verify" content="d4cd72bfa816313bebe81906bf9b2a70" />
         <title>Cryon</title>
-        <link rel="stylesheet" href="./css/output.css">
+        <link rel="stylesheet" href="./css/output.css" rel="preload">
     </head>
 
     <body class="bar">
         <!-- Background  -->
         <div class="background">
-            <img src="./assets/Bg.png" alt="Background">
+            <picture>
+                <source media="(min-width:1200px)"
+                    srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-1200/Bg.png">
+                <source media="(min-width:800px)" srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-800/Bg.png">
+                <source media="(min-width:400px)" srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-400/Bg.png">
+                <img src="https://ik.imagekit.io/maulanafatullah/Cryon/Bg.png" alt="Background">
+            </picture>
         </div>
 
         <!-- Navigation menu -->
@@ -26,14 +32,16 @@
                 <a href="#expertise" class="text-white text-3xl font-light font-jost ml-20">Expertise</a>
             </div>
             <div class="name-tag mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
-                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana Fatullah</span>
+                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana
+                    Fatullah</span>
             </div>
         </nav>
         <!-- Main -->
         <main class="w-[65%] 2xl:w-full h-full flex justify-start 2xl:justify-center items-center">
             <div class="w-full 2xl:max-w-5xl relative">
                 <!-- Top of page mobile -->
-                <section id="top-mobile" class="z-[98271469] 2xl:hidden flex justify-between items-center w-full h-44 mix-blend-exclusion fixed">
+                <section id="top-mobile"
+                    class="z-[98271469] 2xl:hidden flex justify-between items-center w-full h-44 mix-blend-exclusion fixed">
                     <p class="pl-6 text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">Cryon
                         V2 <span id="yearNowTop" class="text-2xl"></span></p>
                 </section>
@@ -41,8 +49,9 @@
                 <section id="home" class="2xl:px-32 pt-44 2xl:pt-0">
                     <img src="./assets/Palette.png" alt="Palette"
                         class="hidden lg:block absolute top-0 right-0 2xl:right-14 shadow-xl">
-                        <!-- Main image -->
-                    <img src="./assets/heliconia.jpeg" alt="Heliconia" class="w-full sm:max-w-xl 2xl:max-w-xl 2xl:rounded-b-2xl 2xl:rounded-tr-none rounded-r-2xl drop-shadow-2xl overflow-hidden mr-16">
+                    <!-- Main image -->
+                        <img src="./assets/heliconia.jpeg"
+                            alt="Heliconia Flower" class="w-full sm:max-w-xl 2xl:rounded-b-2xl 2xl:rounded-tr-none rounded-r-2xl drop-shadow-2xl overflow-hidden mr-16">
                     <div class="w-full py-12 text-white font-normal flex flex-col items-center">
                         <h1
                             class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-7xl xl:text-[8rem] drop-shadow-lg">
@@ -53,7 +62,7 @@
                                 store my project
                             </p>
                         </div>
-                        <div class="w-full pl-8 lg:pl-16 2xl:pl-0 mt-12 flex justify-center 2xl:justify-start">
+                        <div class="w-full pl-8 lg:pl-16 2xl:pl-0 mt-8 flex justify-center 2xl:justify-start">
                             <p class="max-w-lg 2xl:max-w-xl text-base sm:text-xl lg:text-2xl text-left font-light">
                                 You may also view a gallery of images that I took with my smartphone.
                             </p>
@@ -63,8 +72,10 @@
                 <!-- Collection section -->
                 <section id="collection" class="lg:px-16 py-24">
                     <div class="w-full flex flex-col justify-center items-center">
-                        <div class="w-6 h-5 lg:h-10 flex flex-col justify-center items-center bg-white relative rounded-lg lg:rounded-xl lg:mix-blend-screen">
-                            <span class="lg:w-1/5 lg:h-1/2 w-2 h-5 bg-white lg:bg-black rounded-lg lg:rounded-full absolute -top-2/3 right-2/3 lg:right-auto lg:top-0 lg:mix-blend-multiply"></span>
+                        <div
+                            class="w-6 h-5 lg:h-10 flex flex-col justify-center items-center bg-white relative rounded-lg lg:rounded-xl lg:mix-blend-screen">
+                            <span
+                                class="lg:w-1/5 lg:h-1/2 w-2 h-5 bg-white lg:bg-black rounded-lg lg:rounded-full absolute -top-2/3 right-2/3 lg:right-auto lg:top-0 lg:mix-blend-multiply"></span>
                         </div>
                         <span class="text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
                     </div>
@@ -83,8 +94,9 @@
                                     <h1
                                         class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
                                         Cryon</h1>
-                                    <picture class="shadow-2xl relative">
-                                        <div class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+                                    <picture class="project-overlay shadow-2xl relative">
+                                        <div
+                                            class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
 
                                         </div>
                                         <source media="(min-width:1200px)"
@@ -114,8 +126,9 @@
                                     <h1
                                         class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
                                         inBeach</h1>
-                                    <picture class="shadow-2xl relative">
-                                        <div class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+                                    <picture class="project-overlay shadow-2xl relative">
+                                        <div
+                                            class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
 
                                         </div>
                                         <source media="(min-width:1200px)"
@@ -146,8 +159,9 @@
                                     <h1
                                         class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
                                         Pottahands</h1>
-                                    <picture class="shadow-2xl relative">
-                                        <div class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+                                    <picture class="project-overlay shadow-2xl relative">
+                                        <div
+                                            class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
 
                                         </div>
                                         <source media="(min-width:1200px)"
@@ -176,8 +190,9 @@
                                     <h1
                                         class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
                                         TRE Elevator</h1>
-                                    <picture class="shadow-2xl relative">
-                                        <div class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+                                    <picture class="project-overlay shadow-2xl relative">
+                                        <div
+                                            class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
 
                                         </div>
                                         <source media="(min-width:1200px)"
@@ -197,7 +212,8 @@
                                     way, if you require services from this business, you may also get in touch with me.
                                     <br>
                                     <br>
-                                    <span>https://tre-elevator.co.id/</span> this is the official website of this company.
+                                    <span>https://tre-elevator.co.id/</span> this is the official website of this
+                                    company.
                                 </p>
                             </a>
                         </div>
@@ -209,8 +225,9 @@
                                     <h1
                                         class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
                                         Dinda</h1>
-                                    <picture class="shadow-2xl relative">
-                                        <div class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+                                    <picture class="project-overlay shadow-2xl relative">
+                                        <div
+                                            class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
 
                                         </div>
                                         <source media="(min-width:1200px)"
@@ -241,8 +258,9 @@
                                     <h1
                                         class="z-20 pb-6 lg:pb-0 lg:absolute lg:right-1/2 lg:translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 text-3xl lg:text-9xl lg:group-hover:opacity-0 transition-main">
                                         Hoobank</h1>
-                                    <picture class="shadow-2xl relative">
-                                        <div class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
+                                    <picture class="project-overlay shadow-2xl relative">
+                                        <div
+                                            class="w-full h-full lg:bg-dark lg:backdrop-blur-sm lg:group-hover:backdrop-blur-0 lg:bg-opacity-40 group-hover:bg-opacity-0 absolute inset-0 transition-main">
 
                                         </div>
                                         <source media="(min-width:1200px)"
@@ -404,7 +422,8 @@
                     <h1 class="text-5xl">Do you need a website or a design for your personal or business use ?</h1>
                     <p class="text-2xl font-light py-4">I can create Website template, UI/UX design or Graphic design.
                         Hit the button below to place your order.</p>
-                    <a href="https://www.fiverr.com/maulanafatullah" target="_blank" rel="noopener" class="call-to-action group">
+                    <a href="https://www.fiverr.com/maulanafatullah" target="_blank" rel="noopener"
+                        class="call-to-action group">
                         <button
                             class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative group transition-main">
                             <span class="z-30 bg-white p-2">Order now</span>
@@ -415,22 +434,30 @@
                                 <span class="rotate-0 group-hover:-rotate-45 transition-main"></span>
                             </div>
                         </button>
-                        <span class="z-10 text-lg tracking-wider inline-block pt-6 scale-0 -translate-y-full -translate-x-1/2 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 text-light group-hover:animate-pulse group-hover:text-white transition-main">*Please contact me before place your order</span>
+                        <span
+                            class="z-10 text-lg tracking-wider inline-block pt-6 scale-0 -translate-y-full -translate-x-1/2 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 text-light group-hover:animate-pulse group-hover:text-white transition-main">*Please
+                            contact me before place your order</span>
                     </a>
                 </section>
             </div>
         </main>
         <!-- Aside -->
-        <aside class="z-[98364917] w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
+        <aside
+            class="z-[98364917] w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
             <div class="w-full h-full flex flex-col justify-between items-center">
                 <h1 class="text-xl md:text-2xl" id="dateNow"></h1>
-                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2 <span id="yearNow" class="text-2xl"></span></p>
+                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2 <span id="yearNow"
+                        class="text-2xl"></span></p>
             </div>
             <div class="w-max h-full flex flex-col justify-center 2xl:hidden">
-                <div id="name-tag" class="w-max h-full flex flex-col justify-center items-end text-primary text-2xl font-light transition-main">
-                    <span class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90">Maulana Fatullah</span>
+                <div id="name-tag"
+                    class="w-max h-full flex flex-col justify-center items-end text-primary text-2xl font-light transition-main">
+                    <span
+                        class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90">Maulana
+                        Fatullah</span>
                 </div>
-                <div id="nav-mobile-btn" class="w-full h-1/6 nav-mobile-btn flex justify-center items-center relative cursor-pointer">
+                <div id="nav-mobile-btn"
+                    class="w-full h-1/6 nav-mobile-btn flex justify-center items-center relative cursor-pointer">
                     <span></span>
                     <span>
                         <a href="#home">Home</a>
@@ -443,9 +470,9 @@
                 </div>
             </div>
         </aside>
-        <script type="module" src="./js/CryNav.js" ></script>
-        <script type="module" src="./js/CryDate.js" ></script>
-        <script type="module" src="./js/CryCollection.js" ></script>
+        <script type="module" src="./js/CryNav.js"></script>
+        <script type="module" src="./js/CryDate.js"></script>
+        <script type="module" src="./js/CryCollection.js"></script>
     </body>
 
 </html>

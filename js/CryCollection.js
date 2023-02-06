@@ -18,7 +18,7 @@ for (let modalNumber = 1; modalNumber < totalImg; modalNumber++) {
    img.id = 'img-src';
    img.src = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + modalNumber + '.jpeg';
    img.srcset = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-400/pic-' + modalNumber + '.jpeg 400w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + modalNumber + '.jpeg 800w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-1200/pic-' + modalNumber + '.jpeg 1200w';
-   img.loading = true;
+   img.setAttribute('loading', 'lazy');
    article.appendChild(img);
    document.getElementById('collection-page').appendChild(article);
 
@@ -29,6 +29,8 @@ for (let modalNumber = 1; modalNumber < totalImg; modalNumber++) {
 
    const imgModal = document.createElement('img');
    imgModal.id = 'img-modal-src-' + modalNumber;
+   imgModal.classList.add('shadow-2xl');
+   imgModal.setAttribute('loading', 'lazy');
    imgModal.src = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + modalNumber + '.jpeg';
    imgModal.srcset = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-400/pic-' + modalNumber + '.jpeg 400w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + modalNumber + '.jpeg 800w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-1200/pic-' + modalNumber + '.jpeg 1200w';
 
@@ -40,7 +42,6 @@ for (let modalNumber = 1; modalNumber < totalImg; modalNumber++) {
    btnClose.appendChild(spanClose);
 
    dialog.appendChild(imgModal);
-   dialog.appendChild(document.createElement('hr'));
    dialog.appendChild(btnClose);
    document.getElementById('collection-page').appendChild(dialog);
 

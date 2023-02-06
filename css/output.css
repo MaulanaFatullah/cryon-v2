@@ -607,6 +607,10 @@ video {
   margin-right: 1.5rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -1356,8 +1360,6 @@ dialog.hide-collection-modal {
 
 /* Start Project */
 
-picture source ,
-picture img,
 .project-overlay{
   overflow: hidden;
   border-radius: 0.75rem;
@@ -1589,6 +1591,14 @@ picture img,
 @media (min-width: 640px){
   .sm\:max-w-xl{
     max-width: 36rem;
+  }
+
+  .sm\:max-w-lg{
+    max-width: 32rem;
+  }
+
+  .sm\:max-w-sm{
+    max-width: 24rem;
   }
 
   .sm\:text-xl{
