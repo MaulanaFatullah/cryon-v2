@@ -35,7 +35,7 @@
                 <!-- Top of page mobile -->
                 <section id="top-mobile" class="z-[98271469] 2xl:hidden flex justify-between items-center w-full h-44 mix-blend-exclusion fixed">
                     <p class="pl-6 text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">Cryon
-                        V2 <span id="yearNowTop" class="text-3xl"></span></p>
+                        V2 <span id="yearNowTop" class="text-2xl"></span></p>
                 </section>
                 <!-- Home section -->
                 <section id="home" class="2xl:px-32 pt-44 2xl:pt-0">
@@ -67,7 +67,6 @@
                             <span class="lg:w-1/5 lg:h-1/2 w-2 h-5 bg-white lg:bg-black rounded-lg lg:rounded-full absolute -top-2/3 right-2/3 lg:right-auto lg:top-0 lg:mix-blend-multiply"></span>
                         </div>
                         <span class="text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
-                        <span class="text-white pt-4 tracking-wide font-light lg:hidden">Swipe here</span>
                     </div>
                     <div id="collection-page" class="collection-page">
 
@@ -303,7 +302,7 @@
                                 </p>
                             </div>
                             <div
-                                class="social-media-group z-[99877] flex flex-col gap-4 xl:gap-0 xl:flex-row justify-center lg:py-16 absolute xl:static -right-1/3 top-0">
+                                class="social-media-group z-[99] flex flex-col gap-4 xl:gap-0 xl:flex-row justify-center lg:py-16 absolute xl:static -right-1/3 top-0">
                                 <a href="https://bit.ly/maulanafatullah-linkedin" class="group -mx-2 transition-main"
                                     target="_blank" rel="noopener">
                                     <img src="./assets/Social Media/icon_linkedin.svg" alt="LinkedIn Icon"
@@ -422,25 +421,31 @@
             </div>
         </main>
         <!-- Aside -->
-        <aside class=" w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
+        <aside class="z-[98364917] w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
             <div class="w-full h-full flex flex-col justify-between items-center">
                 <h1 class="text-xl md:text-2xl" id="dateNow"></h1>
-                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2 <span id="yearNow" class="text-3xl"></span></p>
+                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2 <span id="yearNow" class="text-2xl"></span></p>
             </div>
             <div class="w-max h-full flex flex-col justify-center 2xl:hidden">
-                <div class="w-max h-full name-tag flex flex-col justify-center items-end text-primary text-2xl font-light ">
+                <div id="name-tag" class="w-max h-full flex flex-col justify-center items-end text-primary text-2xl font-light transition-main">
                     <span class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90">Maulana Fatullah</span>
                 </div>
-                <div class="w-full h-1/6 nav-mobile-btn flex justify-center items-center relative cursor-pointer">
+                <div id="nav-mobile-btn" class="w-full h-1/6 nav-mobile-btn flex justify-center items-center relative cursor-pointer">
                     <span></span>
-                    <span></span>
+                    <span>
+                        <a href="#home">Home</a>
+                        <a href="#collection">Collection</a>
+                        <a href="#project">Project</a>
+                        <a href="#about">About</a>
+                        <a href="#expertise">Expertise</a>
+                    </span>
                     <span></span>
                 </div>
             </div>
         </aside>
-
-        <script src="./js/CryDate.js" type="module"></script>
-        <script src="./js/CryCollection.js" type="module"></script>
+        <script type="module" src="./js/CryNav.js" ></script>
+        <script type="module" src="./js/CryDate.js" ></script>
+        <script type="module" src="./js/CryCollection.js" ></script>
     </body>
 
 </html>
