@@ -6,34 +6,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="p:domain_verify" content="d4cd72bfa816313bebe81906bf9b2a70" />
-        <title>Cryon</title>
-        <link rel="stylesheet" href="./css/output.css" rel="preload">
+        <title>Cryon V2</title>
+        <link rel="stylesheet" href="./css/min-tailwind.css" rel="preload">
     </head>
 
-    <body class="bar">
+    <body class="bg-primary bar">
         <!-- Background  -->
         <div class="background">
-            <picture>
-                <source media="(min-width:1200px)"
-                    srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-1200/Bg.png">
-                <source media="(min-width:800px)" srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-800/Bg.png">
-                <source media="(min-width:400px)" srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-400/Bg.png">
-                <img src="https://ik.imagekit.io/maulanafatullah/Cryon/Bg.png" alt="Background">
-            </picture>
+            <img src="./assets/Background.svg" alt="Background" class="blur-3xl spin-slow bg-primary fixed mix-blend-soft-light">
+            <img src="./assets/Background.svg" alt="Background" class="blur-3xl -spin-slow bg-primary fixed mix-blend-soft-light">
         </div>
 
         <!-- Navigation menu -->
         <nav class="hidden 2xl:flex flex-col justify-around w-1/4 h-screen fixed">
-            <div class="nav-list w-full flex flex-col justify-center items-left gap-10 pt-16 pb-36 relative">
-                <a href="#home" class="text-white text-3xl font-light font-jost ml-20">Home</a>
-                <a href="#collection" class="text-white text-3xl font-light font-jost ml-20">Collection</a>
-                <a href="#project" class="text-white text-3xl font-light font-jost ml-20">Project</a>
-                <a href="#about" class="text-white text-3xl font-light font-jost ml-20">About</a>
-                <a href="#expertise" class="text-white text-3xl font-light font-jost ml-20">Expertise</a>
+            <div class="nav-list w-full flex flex-col justify-center items-left gap-10 pt-16 pb-36 relative ">
+                <a href="#home" class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Home</a>
+                <a href="#collection" class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Collection</a>
+                <a href="#project" class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Project</a>
+                <a href="#about" class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">About</a>
+                <a href="#expertise" class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Expertise</a>
             </div>
             <div class="name-tag mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
-                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20">Maulana
-                    Fatullah</span>
+                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20 shadow-2xl">Maulana Fatullah</span>
             </div>
         </nav>
         <!-- Main -->
@@ -42,19 +36,25 @@
                 <!-- Top of page mobile -->
                 <section id="top-mobile"
                     class="z-[98271469] 2xl:hidden flex justify-between items-center w-full h-44 mix-blend-exclusion fixed">
-                    <p class="pl-6 text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">Cryon
-                        V2 <span id="yearNowTop" class="text-2xl"></span></p>
+                    <p class="pl-6 text-3xl sm:text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">Cryon V2 <span id="yearNowTop" class="text-lg sm:text-xl md:text-2xl"></span></p>
                 </section>
                 <!-- Home section -->
                 <section id="home" class="2xl:px-32 pt-44 2xl:pt-0">
+                    <!-- Palette -->
                     <img src="./assets/Palette.png" alt="Palette"
                         class="hidden lg:block absolute top-0 right-0 2xl:right-14 shadow-xl">
                     <!-- Main image -->
-                        <img src="./assets/heliconia.jpeg"
-                            alt="Heliconia Flower" class="w-full sm:max-w-xl 2xl:rounded-b-2xl 2xl:rounded-tr-none rounded-r-2xl drop-shadow-2xl overflow-hidden mr-16">
+
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-1200/pic-2.jpeg" class="heliconia-flower">
+                        <source media="(min-width:800px)" srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-800/pic-2.jpeg" class="heliconia-flower">
+                        <source media="(min-width:400px)" srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-400/pic-2.jpeg" class="heliconia-flower">
+                        <img src="https://ik.imagekit.io/maulanafatullah/Cryon/pic-2.jpeg" class="heliconia-flower" alt="Background">
+                    </picture>
+
                     <div class="w-full py-12 text-white font-normal flex flex-col items-center">
                         <h1
-                            class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-7xl xl:text-[8rem] drop-shadow-lg">
+                            class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-5xl lg:text-7xl xl:text-[8rem] drop-shadow-lg">
                             Welcome</h1>
                         <div class="w-full pl-8 lg:pl-16 flex justify-center xl:justify-end">
                             <p class="text-2xl lg:text-4xl text-right w-[500px]">
@@ -73,9 +73,9 @@
                 <section id="collection" class="lg:px-16 py-24">
                     <div class="w-full flex flex-col justify-center items-center">
                         <div
-                            class="w-6 h-5 lg:h-10 flex flex-col justify-center items-center bg-white relative rounded-lg lg:rounded-xl lg:mix-blend-screen">
+                            class="w-6 h-10 hidden lg:flex flex-col justify-center items-center bg-white relative rounded-xl mix-blend-screen">
                             <span
-                                class="lg:w-1/5 lg:h-1/2 w-2 h-5 bg-white lg:bg-black rounded-lg lg:rounded-full absolute -top-2/3 right-2/3 lg:right-auto lg:top-0 lg:mix-blend-multiply"></span>
+                                class="hidden lg:block w-1/5 h-1/2 bg-black rounded-full absolute top-0 mix-blend-multiply"></span>
                         </div>
                         <span class="text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
                     </div>
@@ -291,8 +291,7 @@
                 <section id="about" class="w-full h-full pl-5 lg:pl-10 lg:px-16 py-24">
                     <div class="w-full h-full flex justify-center items-center flex-col">
                         <div class="w-full py-6 xl:flex flex-col relative">
-                            <div
-                                class="w-full xl:flex justify-center items-center p-6 background-gradient shadow-2xl rounded-xl">
+                            <div class="w-full xl:flex justify-center items-center p-6 background-gradient shadow-2xl rounded-xl">
                                 <picture
                                     class="w-1/2 xl:w-auto mr-6 xl:mr-0 hidden lg:float-left lg:inline-block h-fit">
                                     <source media="(min-width:1200px)"
@@ -304,8 +303,7 @@
                                     <img src="https://ik.imagekit.io/maulanafatullah/Mine/IMG_20210828_195103__2_.jpg"
                                         alt="Maulana Fatullah standing in the dark with mask and holding pouch">
                                 </picture>
-                                <p
-                                    class="xl:px-10 text-white break-words text-xl lg:text-2xl leading-8 font-light tracking-wider">
+                                <p class="xl:px-10 text-white break-words text-lg xs:text-xl lg:text-2xl leading-8 font-light tracking-wider">
                                     Hi it’s me, <span class="font-bold">Maulana Fatullah</span>. In order to return to
                                     the
                                     digital world for my profession,
@@ -315,12 +313,11 @@
                                     handler.
                                     and am accountable for handling food in a sanitary and safe manner.
                                     <br><br>
-                                    You may order a website similar to this one or another one, though. If you'd like to
+                                    You also may order a website, though. If you'd like to
                                     place an order, please get in touch with me.
                                 </p>
                             </div>
-                            <div
-                                class="social-media-group z-[99] flex flex-col gap-4 xl:gap-0 xl:flex-row justify-center lg:py-16 absolute xl:static -right-1/3 top-0">
+                            <div class="social-media-group z-[9999] flex flex-col gap-4 xl:gap-0 xl:flex-row justify-center xxs:pt-20 xs:pt-10 sm:pt-12 lg:py-16 absolute xl:static -right-[40%] sm:-right-[38%] lg:-right-1/3">
                                 <a href="https://bit.ly/maulanafatullah-linkedin" class="group -mx-2 transition-main"
                                     target="_blank" rel="noopener">
                                     <img src="./assets/Social Media/icon_linkedin.svg" alt="LinkedIn Icon"
@@ -424,8 +421,7 @@
                         Hit the button below to place your order.</p>
                     <a href="https://www.fiverr.com/maulanafatullah" target="_blank" rel="noopener"
                         class="call-to-action group">
-                        <button
-                            class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative group transition-main">
+                        <button class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative group transition-main">
                             <span class="z-30 bg-white p-2">Order now</span>
                             <div
                                 class="order-arrow px-2 -translate-x-[200%] group-hover:-translate-x-1/2 transition-main">
@@ -443,21 +439,18 @@
         </main>
         <!-- Aside -->
         <aside
-            class="z-[98364917] w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
+            class="w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
             <div class="w-full h-full flex flex-col justify-between items-center">
-                <h1 class="text-xl md:text-2xl" id="dateNow"></h1>
-                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2 <span id="yearNow"
-                        class="text-2xl"></span></p>
+                <h1 class="-z-[987699] text-lg sm:text-xl md:text-2xl" id="dateNow"></h1>
+                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2<span id="yearNow" class="text-2xl"></span></p>
             </div>
             <div class="w-max h-full flex flex-col justify-center 2xl:hidden">
                 <div id="name-tag"
                     class="w-max h-full flex flex-col justify-center items-end text-primary text-2xl font-light transition-main">
                     <span
-                        class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90">Maulana
-                        Fatullah</span>
+                        class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90 shadow-2xl">Maulana Fatullah</span>
                 </div>
-                <div id="nav-mobile-btn"
-                    class="w-full h-1/6 nav-mobile-btn flex justify-center items-center relative cursor-pointer">
+                <button id="nav-mobile-btn" class="z-[999] w-full h-1/6 nav-mobile-btn flex justify-center items-center relative">
                     <span></span>
                     <span>
                         <a href="#home">Home</a>
@@ -467,7 +460,7 @@
                         <a href="#expertise">Expertise</a>
                     </span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </aside>
         <script type="module" src="./js/CryNav.js"></script>
