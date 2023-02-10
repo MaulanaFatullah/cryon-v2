@@ -7,9 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="p:domain_verify" content="d4cd72bfa816313bebe81906bf9b2a70" />
         <title>Cryon V2</title>
+        <link rel="shortcut icon" href="./assets/favicon/CryonV2-circle.svg" type="image/x-icon">
         <link rel="stylesheet" href="./css/min-tailwind.css" rel="preload">
-        <!-- <link rel="shortcut icon" href="./assets/favicon/CryonV2-circle.svg" type="image/x-icon"> -->
-        <link rel="stylesheet" href="../src/css/output.css" rel="preload">
+        <link rel="stylesheet" href="./css/CryScrollAnimation.css" rel="preload">
+        <!-- <link rel="stylesheet" href="../src/css/output.css" rel="preload"> -->
     </head>
 
     <body class="bg-primary bar">
@@ -24,64 +25,53 @@
         <!-- Navigation menu -->
         <nav class="hidden 2xl:flex flex-col justify-around w-1/4 h-screen fixed">
             <div class="nav-list w-full flex flex-col justify-center items-left gap-10 pt-16 pb-36 relative ">
-                <a href="#home"
-                    class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Home</a>
-                <a href="#collection"
-                    class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Collection</a>
-                <a href="#project"
-                    class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Project</a>
-                <a href="#about"
-                    class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">About</a>
-                <a href="#expertise"
-                    class="text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Expertise</a>
+                <a href="#home" class="elementHidden -translate-x-full text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Home</a>
+                <a href="#collection" class="elementHidden -translate-x-full text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Collection</a>
+                <a href="#project" class="elementHidden -translate-x-full text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Project</a>
+                <a href="#about" class="elementHidden -translate-x-full text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">About</a>
+                <a href="#expertise" class="elementHidden -translate-x-full text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Expertise</a>
             </div>
             <div class="mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
-                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20 shadow-2xl">Maulana
-                    Fatullah</span>
+                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20 shadow-2xl">MaulanaFatullah</span>
             </div>
         </nav>
         <!-- Main -->
         <main class="w-[65%] 2xl:w-full h-full flex justify-start 2xl:justify-center items-center">
             <div class="w-full 2xl:max-w-5xl relative">
                 <!-- Top of page mobile -->
-                <section id="top-mobile"
-                    class="z-[98271469] 2xl:hidden flex justify-between items-center w-full h-44 mix-blend-exclusion fixed">
-                    <p
-                        class="pl-6 text-3xl sm:text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide">
-                        Cryon V2 <span id="yearNowTop" class="text-lg sm:text-xl md:text-2xl"></span></p>
+                <section class="top-mobile elementHidden -translate-y-full z-[98271469] 2xl:hidden flex justify-between items-center w-full h-44 mix-blend-exclusion fixed">
+                    <p class="pl-6 text-3xl sm:text-5xl md:text-[4rem] text-center text-white font-extralight tracking-wide"> Cryon V2 <span id="yearNowTop" class="text-lg sm:text-xl md:text-2xl"></span></p>
                 </section>
                 <!-- Home section -->
                 <section id="home" class="2xl:px-32 pt-44 2xl:pt-0">
                     <!-- Palette -->
-                    <img src="./assets/Palette.png" alt="Palette"
-                        class="hidden lg:block absolute top-0 right-0 2xl:right-14 shadow-xl">
+                    <img src="./assets/Palette.png" alt="Palette" class="palette elementHidden -translate-y-full hidden lg:block absolute top-0 right-0 2xl:right-14 shadow-xl">
                     <!-- Main image -->
 
-                    <picture>
+                    <picture class="heliconia">
                         <source media="(min-width:1200px)"
                             srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-1200/pic-2.jpeg"
-                            class="heliconia-flower">
+                            class="heliconia-flower elementHidden -translate-y-full">
                         <source media="(min-width:800px)"
                             srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-800/pic-2.jpeg"
-                            class="heliconia-flower">
+                            class="heliconia-flower elementHidden -translate-y-full">
                         <source media="(min-width:400px)"
                             srcset="https://ik.imagekit.io/maulanafatullah/Cryon/tr:w-400/pic-2.jpeg"
-                            class="heliconia-flower">
-                        <img src="https://ik.imagekit.io/maulanafatullah/Cryon/pic-2.jpeg" class="heliconia-flower"
-                            alt="Background">
+                            class="heliconia-flower elementHidden -translate-y-full">
+                        <img src="https://ik.imagekit.io/maulanafatullah/Cryon/pic-2.jpeg" class="heliconia-flower elementHidden -translate-y-full"
+                            alt="Heliconia Flower">
                     </picture>
 
-                    <div class="w-full py-12 text-white font-normal flex flex-col items-center">
-                        <h1
-                            class="bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-5xl lg:text-7xl xl:text-[8rem] drop-shadow-lg">
+                    <div class="welcome w-full py-12 text-white font-normal flex flex-col items-center">
+                        <h1 class="elementHidden -translate-y-full bg-gradient-to-r from-white to-accent text-transparent bg-clip-text tracking-wide leading-[128px] text-5xl lg:text-7xl xl:text-[8rem] drop-shadow-lg">
                             Welcome</h1>
-                        <div class="w-full pl-8 lg:pl-16 flex justify-center xl:justify-end">
+                        <div class="elementHidden -translate-y-full w-full pl-8 lg:pl-16 flex justify-center xl:justify-end">
                             <p class="text-2xl lg:text-4xl text-right w-[500px]">
                                 <span class="text-5xl text-accent font-bold ">Hi</span>, this website was created to
                                 store my project
                             </p>
                         </div>
-                        <div class="w-full pl-8 lg:pl-16 2xl:pl-0 mt-8 flex justify-center 2xl:justify-start">
+                        <div class="elementHidden -translate-y-full w-full pl-8 lg:pl-16 2xl:pl-0 mt-8 flex justify-center 2xl:justify-start">
                             <p class="max-w-lg 2xl:max-w-xl text-base sm:text-xl lg:text-2xl text-left font-light">
                                 You may also view a gallery of images that I took with my smartphone.
                             </p>
@@ -91,21 +81,18 @@
                 <!-- Collection section -->
                 <section id="collection" class="lg:px-16 py-24">
 
-
                     <!-- Scrolling indicator -->
-                    <div class="w-full flex flex-col justify-center items-center">
-                        <div
-                            class="w-6 h-10 hidden lg:flex flex-col justify-center items-center bg-white relative rounded-xl mix-blend-screen">
+                    <div class="scroll-indicator w-full flex flex-col justify-center items-center">
+                        <div class="-translate-y-full w-6 h-10 hidden lg:flex flex-col justify-center items-center bg-white relative rounded-xl mix-blend-screen">
                             <span
                                 class="hidden lg:block w-1/5 h-1/2 bg-black rounded-full absolute top-0 mix-blend-multiply"></span>
                         </div>
-                        <span class="text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
+                        <span class="-translate-y-full text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
                     </div>
 
 
-                    <h1
-                        class="py-6 pl-5 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">
-                        Collection</h1>
+                    <h1 class="collection-title py-6 pl-5 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">Collection</h1>
+
                     <div id="collection-page" class="collection-page">
 
                     </div>
@@ -583,9 +570,24 @@
                 </button>
             </div>
         </aside>
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    // console.log(entry);
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('elementShow');
+                    } else {
+                        entry.target.classList.remove('elementShow');
+                    }
+                });
+            })
+
+            const hiddenElements = document.querySelectorAll('.elementHidden');
+            hiddenElements.forEach((element) => observer.observe(element));
+        </script>
+        <script type="module" src="./js/CryCollection.js"></script>
         <script type="module" src="./js/CryNav.js"></script>
         <script type="module" src="./js/CryDate.js"></script>
-        <script type="module" src="./js/CryCollection.js"></script>
     </body>
 
 </html>
