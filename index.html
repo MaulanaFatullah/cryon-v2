@@ -9,11 +9,15 @@
         <title>Cryon V2</title>
         <link rel="shortcut icon" href="./assets/favicon/CryonV2-circle.svg" type="image/x-icon">
         <link rel="stylesheet" href="./css/min-tailwind.css" rel="preload">
-        <link rel="stylesheet" href="./css/CryScrollAnimation.css" rel="preload">
         <!-- <link rel="stylesheet" href="../src/css/output.css" rel="preload"> -->
+        <link rel="stylesheet" href="./css/CryScrollAnimation.css" rel="preload">
     </head>
 
     <body class="bg-primary bar">
+
+        <div id="preloader" class="z-[987987987] w-full h-screen flex justify-center items-center bg-gradient-to-b from-primary to-accent fixed">
+            <img src="./assets/preloader.webp" alt="Preload" class="w-1/4 mix-blend-screen">
+        </div>
         <!-- Background  -->
         <div class="background">
             <img src="./assets/Background.svg" alt="Background"
@@ -32,7 +36,7 @@
                 <a href="#expertise" class="elementHidden -translate-x-full text-white text-3xl font-light font-jost ml-20 drop-shadow-lg shadow-rose-700">Expertise</a>
             </div>
             <div class="mt-20 h-auto flex flex-col justify-end text-primary text-2xl font-light ">
-                <span class="w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20 shadow-2xl">MaulanaFatullah</span>
+                <span class="name-tag elementHidden -translate-x-full w-fit bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl ml-20 shadow-2xl">Maulana Fatullah</span>
             </div>
         </nav>
         <!-- Main -->
@@ -83,24 +87,27 @@
 
                     <!-- Scrolling indicator -->
                     <div class="scroll-indicator w-full flex flex-col justify-center items-center">
-                        <div class="-translate-y-full w-6 h-10 hidden lg:flex flex-col justify-center items-center bg-white relative rounded-xl mix-blend-screen">
-                            <span
-                                class="hidden lg:block w-1/5 h-1/2 bg-black rounded-full absolute top-0 mix-blend-multiply"></span>
+                        <div class="elementHidden -translate-y-10 w-6 h-10 hidden lg:flex flex-col justify-center items-center bg-white relative rounded-xl mix-blend-screen">
+                            <span class="hidden lg:block w-1/5 h-1/2 bg-black rounded-full absolute top-0 mix-blend-multiply"></span>
                         </div>
-                        <span class="-translate-y-full text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
+                        <span class="elementHidden -translate-y-10 text-white pt-4 tracking-wide font-light hidden lg:inline">Scroll here</span>
                     </div>
 
 
-                    <h1 class="collection-title py-6 pl-5 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">Collection</h1>
+                    <h1 class="collection-title elementHidden translate-y-10 py-6 pl-5 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest transition-main">Collection</h1>
 
                     <div id="collection-page" class="collection-page">
+                        <div id="collection-modal">
+                            
+                        </div>
+                        <div id="collection-image">
 
+                        </div>
                     </div>
 
                     <a href="https://bit.ly/maulanafatullah-pinterest" target="_blank" rel="noopener"
-                        class="w-fit inline-block call-to-action relative group">
-                        <button
-                            class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative transition-main">
+                        class="full-collection-btn elementHidden scale-75 w-fit inline-block call-to-action relative group">
+                        <button class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative transition-main">
                             <span class="z-30 bg-white p-2">Full Collection</span>
                         </button>
                     </a>
@@ -108,11 +115,9 @@
                 <!-- Project section -->
                 <section id="project" class="w-full pl-5 lg:pl-10 lg:px-16 py-24">
 
-                    <h1
-                        class="py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">
-                        Projects</h1>
+                    <h1 class="project-title elementHidden translate-y-10 py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">Projects</h1>
 
-                    <div class="snap-mandatory snap-both lg:h-[900px] overflow-y-scroll bar">
+                    <div class="project-list elementHidden -translate-y-10 snap-mandatory snap-both lg:h-[900px] overflow-y-scroll bar">
                         <div class="w-full h-full snap-always snap-center lg:border-r-2 border-white py-16 lg:px-10">
                             <a href="https://maulanafatullah.my.id/" target="_blank" rel="noopener"
                                 class="w-full h-fit flex flex-col font-jost text-white group lg:scale-75 hover:scale-100 transition-main">
@@ -324,7 +329,7 @@
                     </div>
                     
                     <a href="https://drive.google.com/file/d/1PWx8c94JsqYlsACp5Z2gWrNHx7At6Oaa/view?usp=share_link" target="_blank" rel="noopener"
-                        class="w-fit block call-to-action relative group mt-6 mx-auto">
+                        class="portfolio-btn elementHidden scale-75 w-fit block call-to-action relative group mt-6 mx-auto">
                         <button
                             class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative transition-main">
                             <span class="z-30 bg-white p-2">Portfolio</span>
@@ -334,14 +339,11 @@
                 <!-- About section -->
                 <section id="about" class="w-full h-full pl-5 lg:pl-10 lg:px-16 py-24">
                     <div class="w-full h-full flex flex-col justify-center items-center text-white">
-                        <h1
-                            class="py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">
+                        <h1 class="about-title elementHidden translate-y-10 py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">
                             About me</h1>
-                        <div class="w-full py-6 xl:flex flex-col relative">
-                            <div
-                                class="w-full xl:flex justify-center items-center p-6 background-gradient shadow-2xl rounded-xl">
-                                <picture
-                                    class="w-1/2 xl:w-auto mr-6 xl:mr-0 hidden lg:float-left lg:inline-block h-fit">
+                        <div class="about-desc elementHidden -translate-y-10 w-full py-6 xl:flex flex-col relative">
+                            <div class="w-full xl:flex justify-center items-center p-6 background-gradient shadow-2xl rounded-xl">
+                                <picture class="w-1/2 xl:w-auto mr-6 xl:mr-0 hidden lg:float-left lg:inline-block h-fit">
                                     <source media="(min-width:1200px)"
                                         srcset="https://ik.imagekit.io/maulanafatullah/Mine/tr:w-1200/IMG_20210828_195103__2_.jpg">
                                     <source media="(min-width:800px)"
@@ -366,8 +368,7 @@
                                     place an order, please get in touch with me.
                                 </p>
                             </div>
-                            <div
-                                class="social-media-group z-[9999] flex flex-col gap-4 xl:gap-0 xl:flex-row justify-center xxs:pt-20 xs:pt-10 sm:pt-12 lg:py-16 absolute xl:static top-0 -right-[40%] sm:-right-[38%] lg:-right-1/3">
+                            <div class="social-media-group elementHidden translate-y-10 z-[9999] flex flex-col gap-4 xl:gap-0 xl:flex-row justify-center xxs:pt-20 xs:pt-10 sm:pt-12 lg:py-16 absolute xl:static top-0 -right-[40%] sm:-right-[38%] lg:-right-1/3">
                                 <a href="https://bit.ly/maulanafatullah-linkedin" class="group -mx-2 transition-main"
                                     target="_blank" rel="noopener">
                                     <img src="./assets/Social Media/icon_linkedin.svg" alt="LinkedIn Icon"
@@ -407,12 +408,10 @@
                         </div>
                         <div class="w-full h-full">
 
-                            <h1
-                                class="py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">
+                            <h1 class="education-title elementHidden translate-y-10 py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">
                                 Education</h1>
 
-                            <ol
-                                class="border-l md:border-l-0 md:border-t border-white md:flex md:justify-center md:gap-6">
+                            <ol class="education-timeline elementHidden -translate-y-10 border-l md:border-l-0 md:border-t border-white md:flex md:justify-center md:gap-6">
                                 <li>
                                     <div class="flex md:block flex-start items-center pt-2 md:pt-0">
                                         <div class="bg-white w-2 h-2 rounded-full -ml-1 md:ml-0 mr-3 md:mr-0 md:-mt-1">
@@ -446,8 +445,7 @@
                             </ol>
                         </div>
                         
-                    <a href="https://drive.google.com/file/d/1-bk0R9K2KhklYGx3hdLxSd-u8qnXygEL/view?usp=share_link" target="_blank" rel="noopener"
-                        class="w-fit inline-block call-to-action relative group mt-6">
+                    <a href="https://drive.google.com/file/d/1-bk0R9K2KhklYGx3hdLxSd-u8qnXygEL/view?usp=share_link" target="_blank" rel="noopener" class="cv-btn elementHidden scale-75 w-fit inline-block call-to-action relative group mt-6">
                         <button
                             class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative transition-main">
                             <span class="z-30 bg-white p-2">Curriculum Vitae</span>
@@ -459,72 +457,69 @@
                 <!-- Expertise section -->
                 <section id="expertise" class="pl-5 lg:pl-10 lg:px-16 py-24">
 
-                    <h1
-                        class="py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">
-                        Expertise</h1>
+                    <h1 class="expertise-title elementHidden translate-y-10 py-6 text-white text-left md:text-center text-5xl md:text-8xl font-medium tracking-widest">Expertise</h1>
 
-                    <div class="w-full h-full flex flex-1 flex-wrap gap-5 xl:gap-10 justify-between items-center">
+                    <div class="expertise-list w-full h-full flex flex-1 flex-wrap gap-5 xl:gap-10 justify-between items-center">
                         <a href="https://www.google.com/search?q=html" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/html5.svg" alt="HTML" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=css" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/css3.svg" alt="CSS" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=javascript" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/js.svg" alt="JavaScript" class="w-1/2">
                         </a>
 
                         <a href="https://www.google.com/search?q=tailwind" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/tailwind.svg" alt="TailwindCSS" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=reactjs" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/reactjs.svg" alt="ReactJS" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=github" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/github.svg" alt="GitHub" class="w-1/2">
                         </a>
 
                         <a href="https://www.google.com/search?q=git" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/git.svg" alt="Git" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=vscode" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/vscode.svg" alt="VSCode" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=adobe%20lightroom" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/lightroom.svg" alt="Adobe Lightroom" class="w-1/2">
                         </a>
 
                         <a href="https://www.google.com/search?q=snapseed" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/snapseed.svg" alt="Snapseed" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=figma" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/figma.svg" alt="Figma" class="w-1/2">
                         </a>
                         <a href="https://www.google.com/search?q=notion" target="_blank" rel="noopener"
-                            class="application-expertise">
+                            class="application-expertise elementHidden -translate-y-10">
                             <img src="./assets/Application/notion.svg" alt="Notion" class="w-1/2">
                         </a>
 
                     </div>
                 </section>
                 <!-- Footer section -->
-                <section id="footer" class="pl-5 lg:pl-10 lg:px-16 py-24 text-white">
-                    <h1 class="text-5xl">Do you need a website or a design for your personal or business use ?</h1>
-                    <p class="text-2xl font-light py-4">I can create Website template, UI/UX design or Graphic design.
+                <section id="footer" class="footer-list pl-5 lg:pl-10 lg:px-16 py-24 text-white">
+                    <h1 class="text-5xl elementHidden translate-y-10">Do you need a website or a design for your personal or business use ?</h1>
+                    <p class="text-2xl font-light py-4 elementHidden translate-y-10">I can create Website template, UI/UX design or Graphic design.
                         Hit the button below to place your order.</p>
-                    <a href="https://www.fiverr.com/maulanafatullah" target="_blank" rel="noopener"
-                        class="w-fit inline-block call-to-action relative group">
+                    <a href="https://www.fiverr.com/maulanafatullah" target="_blank" rel="noopener" class="elementHidden scale-75 w-fit inline-block call-to-action relative group">
                         <button
                             class="z-20 flex justify-center items-center py-2 px-4 font-jost bg-white text-primary text-2xl rounded-lg hover:rounded-3xl relative group transition-main">
                             <span class="z-30 bg-white p-2">Order now</span>
@@ -535,8 +530,7 @@
                                 <span class="rotate-0 group-hover:-rotate-45 transition-main"></span>
                             </div>
                         </button>
-                        <span
-                            class="z-10 text-lg tracking-wider inline-block pt-6 scale-0 -translate-y-full -translate-x-1/2 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 text-light group-hover:animate-pulse group-hover:text-white absolute transition-main lg:whitespace-nowrap">*Please
+                        <span class="z-10 text-lg tracking-wider inline-block pt-6 scale-0 -translate-y-10 -translate-x-1/2 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 text-light group-hover:animate-pulse group-hover:text-white absolute transition-main lg:whitespace-nowrap">*Please
                             contact me before place your order</span>
                     </a>
                 </section>
@@ -545,16 +539,14 @@
         <!-- Aside -->
         <aside
             class="w-[30%] h-full px-[2.5%] 2xl:max-w-1/4 flex flex-col justify-between items-center fixed top-0 right-0 text-white font-extralight tracking-wide pt-20 pb-20 2xl:pb-60 ">
-            <div class="w-full h-full flex flex-col justify-between items-center">
-                <h1 class="-z-[987699] text-lg sm:text-xl md:text-2xl" id="dateNow"></h1>
-                <p class="w-96 text-[4rem] -rotate-90 hidden 2xl:inline">Cryon V2<span id="yearNow"
-                        class="text-2xl"></span></p>
+            <div class="cryon-title w-full h-full flex flex-col justify-between items-center ">
+                <h1 class="elementHidden translate-x-full -z-[987699] text-lg sm:text-xl md:text-2xl " id="dateNow"></h1>
+                <p class="elementHidden translate-y-10 -rotate-90 w-96 text-[4rem] hidden 2xl:inline ">Cryon V2<span id="yearNow" class="text-2xl"></span></p>
             </div>
             <div class="not-selected w-max h-full flex flex-col justify-center 2xl:hidden">
                 <div id="name-tag"
                     class="w-max h-full flex flex-col justify-center items-end text-primary text-2xl font-light transition-main">
-                    <span
-                        class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90 shadow-2xl">Maulana Fatullah</span>
+                    <span class="w-max bg-white bg-opacity-75 py-2 px-4 text-center rounded-xl whitespace-nowrap -rotate-90 shadow-2xl">Maulana Fatullah</span>
                 </div>
                 <button id="nav-mobile-btn"
                     class="not-selected z-[999] h-fit nav-mobile-btn inline-flex justify-center items-center relative">
@@ -571,21 +563,17 @@
             </div>
         </aside>
         <script>
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    // console.log(entry);
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('elementShow');
-                    } else {
-                        entry.target.classList.remove('elementShow');
-                    }
-                });
-            })
+            const preloader = document.getElementById('preloader');
 
-            const hiddenElements = document.querySelectorAll('.elementHidden');
-            hiddenElements.forEach((element) => observer.observe(element));
+            window.addEventListener('load', function() {
+                preloader.classList.add('none');
+            //    setTimeout(function() {
+            //     preloader.classList.add('none');
+            //    }, 1000);
+            })
         </script>
         <script type="module" src="./js/CryCollection.js"></script>
+        <script type="module" src="./js/CryScrollAnimation.js"></script>
         <script type="module" src="./js/CryNav.js"></script>
         <script type="module" src="./js/CryDate.js"></script>
     </body>
