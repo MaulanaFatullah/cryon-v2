@@ -51,16 +51,17 @@ for (let modalNumber = 1; modalNumber < totalImg; modalNumber++) {
    const snapModal = document.getElementById('snapshot-collection-' + modalNumber);
 
    const imageModal = document.querySelector('#img-modal-' + modalNumber);
+   
    snapModal.addEventListener('click', function () {
       imageModal.showModal();
    });
 
    closeImageModal.addEventListener('click', function () {
       imageModal.classList.add('hide-collection-modal');
-      imageModal.addEventListener('webkitAnimationEnd', function () {
+      imageModal.addEventListener('webkitAnimationEnd', function eventRemove() {
          imageModal.classList.remove('hide-collection-modal');
          imageModal.close();
-         imageModal.removeEventListener('webkitAnimationEnd', arguments.callee, false);
-      }, false);
+         imageModal.removeEventListener('webkitAnimationEnd', eventRemove, false);
+      }, true);
    });
 }
