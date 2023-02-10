@@ -1,1 +1,74 @@
-const navButton=document.querySelector(".nav-btn"),navMobile=document.querySelector(".nav-mobile");let collectionPage=document.getElementById("collection-page"),totalImg=22;for(let imageNumber=1;imageNumber<totalImg;imageNumber++){let e=document.createElement("dialog");e.id="img-modal-"+imageNumber,e.classList.add("img-modal");let t=document.createElement("img");t.id="img-modal-src-"+imageNumber,t.classList.add("shadow-2xl"),t.setAttribute("loading","lazy"),t.src="https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-"+imageNumber+".jpeg",t.srcset="https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-400/pic-"+imageNumber+".jpeg 400w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-"+imageNumber+".jpeg 800w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-1200/pic-"+imageNumber+".jpeg 1200w";let a=document.createElement("div");a.id="btn-close-img-"+imageNumber,a.classList.add("btn-close-img");let l=document.createElement("span");l.appendChild(document.createTextNode("✖")),a.appendChild(l),e.appendChild(t),e.appendChild(a),document.getElementById("collection-modal").appendChild(e);let i=document.querySelector("#img-modal-"+imageNumber),m=document.getElementById("btn-close-img-"+imageNumber);m.addEventListener("click",function(){i.classList.add("hide-collection-modal"),console.log(i),!0===i.classList.contains("hide-collection-modal")&&i.addEventListener("webkitAnimationEnd",function e(){i.classList.remove("hide-collection-modal"),i.close(),i.removeEventListener("webkitAnimationEnd",e,!1)},!1)})}for(let modalNumber=1;modalNumber<totalImg;modalNumber++){let o=document.createElement("div");o.id="snapshot-collection-"+modalNumber,o.classList.add("img-collection","btn-img-modal","elementHidden","-translate-y-10");let n=document.createElement("img");n.id="img-src",n.src="https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-"+modalNumber+".jpeg",n.srcset="https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-400/pic-"+modalNumber+".jpeg 400w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-"+modalNumber+".jpeg 800w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-1200/pic-"+modalNumber+".jpeg 1200w",n.setAttribute("loading","lazy"),o.appendChild(n),document.getElementById("collection-image").appendChild(o);let d=document.getElementById("snapshot-collection-"+modalNumber),r=document.querySelector("#img-modal-"+modalNumber);d.addEventListener("click",function(){r.showModal()})}
+const navButton = document.querySelector('.nav-btn');
+const navMobile = document.querySelector('.nav-mobile');
+
+// ---------------------------------------------------------------
+
+
+let collectionPage = document.getElementById('collection-page');
+let totalImg = 22;
+
+// Dialog iteration
+for (let imageNumber = 1; imageNumber < totalImg; imageNumber++) {
+
+   const dialog = document.createElement('dialog');
+   dialog.id = 'img-modal-' + imageNumber;
+   dialog.classList.add('img-modal');
+
+   const imgModal = document.createElement('img');
+   imgModal.id = 'img-modal-src-' + imageNumber;
+   imgModal.classList.add('shadow-2xl');
+   imgModal.setAttribute('loading', 'lazy');
+   imgModal.src = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + imageNumber + '.jpeg';
+   imgModal.srcset = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-400/pic-' + imageNumber + '.jpeg 400w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + imageNumber + '.jpeg 800w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-1200/pic-' + imageNumber + '.jpeg 1200w';
+
+   const btnClose = document.createElement('div');
+   btnClose.id = 'btn-close-img-' + imageNumber;
+   btnClose.classList.add('btn-close-img');
+   const spanClose = document.createElement('span');
+   spanClose.appendChild(document.createTextNode('✖'));
+   btnClose.appendChild(spanClose);
+
+   dialog.appendChild(imgModal);
+   dialog.appendChild(btnClose);
+   document.getElementById('collection-modal').appendChild(dialog);
+
+   const imageModalNumber = document.querySelector('#img-modal-' + imageNumber);
+   const closeImageModal = document.getElementById('btn-close-img-' + imageNumber);
+
+   closeImageModal.addEventListener('click', function () {
+      imageModalNumber.classList.add('hide-collection-modal');
+
+      console.log(imageModalNumber);
+      if (imageModalNumber.classList.contains('hide-collection-modal') === true) {
+         imageModalNumber.addEventListener('webkitAnimationEnd', function eventRemove() {
+            imageModalNumber.classList.remove('hide-collection-modal');
+            imageModalNumber.close();
+            imageModalNumber.removeEventListener('webkitAnimationEnd', eventRemove, false);
+         }, false);
+      }
+   });
+}
+
+// Collection Image iteration
+for (let modalNumber = 1; modalNumber < totalImg; modalNumber++) {
+
+   const collectionImage = document.createElement('div');
+   collectionImage.id = 'snapshot-collection-' + modalNumber;
+   collectionImage.classList.add('img-collection', 'btn-img-modal', 'elementHidden', '-translate-y-10');
+   const img = document.createElement('img');
+   img.id = 'img-src';
+   img.src = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + modalNumber + '.jpeg';
+   img.srcset = 'https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-400/pic-' + modalNumber + '.jpeg 400w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-800/pic-' + modalNumber + '.jpeg 800w, https://ik.imagekit.io/maulanafatullah/Kryon/tr:w-1200/pic-' + modalNumber + '.jpeg 1200w';
+   img.setAttribute('loading', 'lazy');
+   collectionImage.appendChild(img);
+   document.getElementById('collection-image').appendChild(collectionImage);
+
+
+   const snapModal = document.getElementById('snapshot-collection-' + modalNumber);
+
+   const imageModal = document.querySelector('#img-modal-' + modalNumber);
+
+   snapModal.addEventListener('click', function () {
+      imageModal.showModal();
+   });
+}
